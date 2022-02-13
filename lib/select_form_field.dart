@@ -207,7 +207,7 @@ class SelectFormField extends FormField<String> {
           enabled: enabled,
           builder: (FormFieldState<String> field) {
             final _SelectFormFieldState state = field as _SelectFormFieldState;
-
+            VoidCallback? _onPressDecoration;
             final InputDecoration effectiveDecoration = (decoration ??
                 InputDecoration(
                   labelText: labelText,
@@ -217,7 +217,7 @@ class SelectFormField extends FormField<String> {
                     width: 10,
                     margin: EdgeInsets.all(0),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: _onPressDecoration,
                       child: Icon(Icons.arrow_drop_down),
                     ),
                   ),
@@ -246,55 +246,60 @@ class SelectFormField extends FormField<String> {
                 }
               }
 
-              return TextField(
-                controller: state._labelController,
-                focusNode: focusNode,
-                decoration: effectiveDecoration.copyWith(
-                  errorText: field.errorText,
-                ),
-                keyboardType: keyboardType,
-                textInputAction: textInputAction,
-                style: style,
-                strutStyle: strutStyle,
-                textAlign: textAlign,
-                textAlignVertical: textAlignVertical,
-                textDirection: textDirection,
-                textCapitalization: textCapitalization,
-                autofocus: autofocus,
-                toolbarOptions: toolbarOptions,
-                readOnly: true,
-                showCursor: showCursor,
-                obscureText: obscureText,
-                autocorrect: autocorrect,
-                smartDashesType: smartDashesType ??
-                    (obscureText
-                        ? SmartDashesType.disabled
-                        : SmartDashesType.enabled),
-                smartQuotesType: smartQuotesType ??
-                    (obscureText
-                        ? SmartQuotesType.disabled
-                        : SmartQuotesType.enabled),
-                enableSuggestions: enableSuggestions,
-                //maxLengthEnforced: maxLengthEnforced,
-                maxLines: maxLines,
-                minLines: minLines,
-                expands: expands,
-                maxLength: maxLength,
-                onChanged: onChangedHandler,
-                onTap: readOnly ? null : lfOnTap,
-                onEditingComplete: onEditingComplete,
-                onSubmitted: onFieldSubmitted,
-                inputFormatters: inputFormatters,
-                enabled: enabled,
-                cursorWidth: cursorWidth,
-                cursorRadius: cursorRadius,
-                cursorColor: cursorColor,
-                scrollPadding: scrollPadding,
-                scrollPhysics: scrollPhysics,
-                keyboardAppearance: keyboardAppearance,
-                enableInteractiveSelection: enableInteractiveSelection,
-                buildCounter: buildCounter,
-              );
+              return InkWell(
+                  focusNode: focusNode,
+                  onLongPress: readOnly ? null : lfOnTap,
+                  onTap: readOnly ? null : lfOnTap,
+                  child: AbsorbPointer(
+                      child: TextField(
+                    controller: state._labelController,
+                    focusNode: focusNode,
+                    decoration: effectiveDecoration.copyWith(
+                      errorText: field.errorText,
+                    ),
+                    keyboardType: keyboardType,
+                    textInputAction: textInputAction,
+                    style: style,
+                    strutStyle: strutStyle,
+                    textAlign: textAlign,
+                    textAlignVertical: textAlignVertical,
+                    textDirection: textDirection,
+                    textCapitalization: textCapitalization,
+                    autofocus: autofocus,
+                    toolbarOptions: toolbarOptions,
+                    readOnly: true,
+                    showCursor: showCursor,
+                    obscureText: obscureText,
+                    autocorrect: autocorrect,
+                    smartDashesType: smartDashesType ??
+                        (obscureText
+                            ? SmartDashesType.disabled
+                            : SmartDashesType.enabled),
+                    smartQuotesType: smartQuotesType ??
+                        (obscureText
+                            ? SmartQuotesType.disabled
+                            : SmartQuotesType.enabled),
+                    enableSuggestions: enableSuggestions,
+                    //maxLengthEnforced: maxLengthEnforced,
+                    maxLines: maxLines,
+                    minLines: minLines,
+                    expands: expands,
+                    maxLength: maxLength,
+                    onChanged: onChangedHandler,
+                    onTap: readOnly ? null : lfOnTap,
+                    onEditingComplete: onEditingComplete,
+                    onSubmitted: onFieldSubmitted,
+                    inputFormatters: inputFormatters,
+                    enabled: enabled,
+                    cursorWidth: cursorWidth,
+                    cursorRadius: cursorRadius,
+                    cursorColor: cursorColor,
+                    scrollPadding: scrollPadding,
+                    scrollPhysics: scrollPhysics,
+                    keyboardAppearance: keyboardAppearance,
+                    enableInteractiveSelection: enableInteractiveSelection,
+                    buildCounter: buildCounter,
+                  )));
             }
 
             switch (type) {
