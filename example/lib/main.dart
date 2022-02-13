@@ -46,6 +46,108 @@ class _MyHomePageState extends State<MyHomePage> {
       'enable': false,
       'icon': Icon(Icons.grade),
     },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
+    {
+      'value': 'boxValue',
+      'label': 'Box Label',
+      'icon': Icon(Icons.stop),
+    },
+    {
+      'value': 'circleValue',
+      'label': 'Circle Label Loooooooooooooooooooong text',
+      'icon': Icon(Icons.fiber_manual_record),
+      'textStyle': TextStyle(color: Colors.red),
+    },
+    {
+      'value': 'starValue',
+      'label': 'Star Label',
+      'enable': false,
+      'icon': Icon(Icons.grade),
+    },
   ];
 
   /*final List<Map<String, dynamic>> _items = [
